@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <div class="container">
+        <div id="password-container">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" />
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="main-content" style="display: none;">
+            <header>
+                <div id="hypixel-banner">
+                    <!-- Add your Hypixel banner image here -->
+                    <img src="hypixel_banner.png" alt="Hypixel Banner">
+                </div>
+                <div id="youtube-legends">
+                    <h1>YouTube Legends</h1>
+                </div>
+            </header>
+            <div class="content">
+                <div id="announcements">
+                    <!-- Add your announcements content here -->
+                    <h2>Announcements</h2>
+                    <p>Your announcement content goes here.</p>
+                </div>
+                <div id="members-list">
+                    <!-- Add your members list here -->
+                    <h2>Members List</h2>
+                    <!-- Sample member profile -->
+                    <div class="member">
+                        <img src="member_avatar1.png" alt="Member Avatar">
+                        <div class="bio">
+                            <h3>Member Name</h3>
+                            <p>Member bio goes here.</p>
+                        </div>
+                    </div>
+                    <!-- Repeat the above structure for other members -->
+                    <!-- Add more member profiles as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'YouTubeLEGENDS') {
+                document.getElementById('password-container').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
